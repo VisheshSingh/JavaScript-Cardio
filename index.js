@@ -48,7 +48,7 @@ function reverseString(str) {
 
     ///////////////////////////////////
     //METHOD 6: USING HIGHER ORDER FUNC - REDUCE
-    return str.split('').reduce((revString, char) => char+revString, '');
+    /* return str.split('').reduce((revString, char) => char+revString, ''); */
 }
 
 
@@ -57,7 +57,10 @@ function reverseString(str) {
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+    let revString = str.split('').reverse().join('');
+    return ( revString === str);
+}
 
 
 
@@ -90,6 +93,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = reverseString('hello');
+const output = isPalindrome('hello');
 
 console.log(output);
