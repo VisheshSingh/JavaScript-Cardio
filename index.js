@@ -3,9 +3,19 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  const strArr = str.split('');
-  strArr.reverse();
-  return strArr.join('');
+    //METHOD 1: USING SPLIT, REVERSE, JOIN
+  /* return str
+    .split('')
+    .reverse()
+    .join(''); */
+
+    ///////////////////////////////////
+    //METHOD 2: USING OLD SCHOOL FOR LOOP
+    let revString = '';
+    for(let i=str.length - 1; i >= 0; i--){
+        revString = revString + str[i];
+    }
+    return revString;
 }
 
 
