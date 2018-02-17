@@ -26,11 +26,19 @@ function reverseString(str) {
 
     /////////////////////////////////////
     //METHOD 3:
-    let revString = '';
+    /* let revString = '';
     for(let s of str){
         revString =  s + revString;
     }
-    return revString;
+    return revString; */
+
+    ///////////////////////////////////////
+    //METHOD 4: USING FOR EACH LOOP
+    let revString = '';
+    str.split('').forEach(function(element) {
+        revString = element + revString;
+    });
+    return revString
 }
 
 
