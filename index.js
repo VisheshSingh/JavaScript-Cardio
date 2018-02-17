@@ -11,9 +11,24 @@ function reverseString(str) {
 
     ///////////////////////////////////
     //METHOD 2: USING OLD SCHOOL FOR LOOP
-    let revString = '';
+   /*  let revString = '';
     for(let i=str.length - 1; i >= 0; i--){
         revString = revString + str[i];
+    }
+    return revString; */
+
+    ////////////////////////////////////
+    /* let revString = '';
+    for(let i=0; i <= str.length - 1; i++){
+        revString =  str[i] + revString;
+    }
+    return revString; */
+
+    /////////////////////////////////////
+    //METHOD 3:
+    let revString = '';
+    for(let s of str){
+        revString =  s + revString;
     }
     return revString;
 }
