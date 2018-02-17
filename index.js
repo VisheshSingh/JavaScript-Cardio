@@ -34,11 +34,21 @@ function reverseString(str) {
 
     ///////////////////////////////////////
     //METHOD 4: USING FOR EACH LOOP
-    let revString = '';
+    /* let revString = '';
     str.split('').forEach(function(element) {
         revString = element + revString;
     });
-    return revString
+    return revString */
+
+    //////////////////////////////////////
+    //METHOD 5: FOR EACH USING ARRAW FUNCTIONS
+    /* let revString = '';
+    str.split('').forEach(element => revString = element + revString);
+    return revString */
+
+    ///////////////////////////////////
+    //METHOD 6: USING HIGHER ORDER FUNC - REDUCE
+    return str.split('').reduce((revString, char) => char+revString, '');
 }
 
 
