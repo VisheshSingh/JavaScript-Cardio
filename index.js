@@ -68,7 +68,11 @@ function isPalindrome(str) {
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) {}
+function reverseInt(int) {
+    const revString = int.toString().split('').reverse().join('');
+
+    return parseInt(revString);
+}
 
 
 
@@ -93,6 +97,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = isPalindrome('hello');
+const output = reverseInt(12345);
 
 console.log(output);
