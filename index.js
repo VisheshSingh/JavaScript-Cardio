@@ -99,11 +99,17 @@ function capitalizeLetters(str) {
 
     ///////////////////////////////////////
     //METHOD 3:
-    return str
+    /* return str
         .toLowerCase()
         .split(' ')
         .map(word => word[0].toUpperCase() + word.substr(1))
-        .join(' ');
+        .join(' '); */
+
+    ///////////////////////////////////////
+    //METHOD 4: USING REGEX
+    return str.replace(/\b[a-z]/gi, function(char){
+        return char.toUpperCase();
+    });
 }
 
 
@@ -122,6 +128,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = capitalizeLetters('i love jAVASCRIPT');
+const output = capitalizeLetters('i love javascript');
 
 console.log(output);
