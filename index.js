@@ -92,10 +92,18 @@ function capitalizeLetters(str) {
 
     //////////////////////////////////////
     //METHOD 2: USING MAP FUNCTION
-    return str.toLowerCase().split(' ')
+    /* return str.toLowerCase().split(' ')
         .map(function(word) {
             return word[0].toUpperCase() + word.substr(1);
-        }).join(' ');
+        }).join(' '); */
+
+    ///////////////////////////////////////
+    //METHOD 3:
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map(word => word[0].toUpperCase() + word.substr(1))
+        .join(' ');
 }
 
 
