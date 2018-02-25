@@ -61,11 +61,14 @@ function longestWord(sen) {
       // SOLUTION 2
       //return [].concat.apply([], arrays);
 
-      function add(a, b, c){
+      /* function add(a, b, c){
           return a+b+c;
       }
       const arr = [1, 2, 3];
-      console.log(add(...arr));
+      console.log(add(...arr)); */
+
+      //SOLUTION 3
+      return [].concat(...arrays);
   }
   
   // CHALLENGE 4: ANAGRAM
