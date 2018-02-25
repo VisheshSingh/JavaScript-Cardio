@@ -31,22 +31,32 @@ function longestWord(sen) {
   // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
   
   function chunkArray(arr, len) {
-    const chunkedArr = [];
-    let i = 0;
+    // SOLUTION 1:  
+    // const chunkedArr = [];
+    // let i = 0;
   
-    while(i < arr.length) {
-        chunkedArr.push(arr.slice(i, i+len));
-        i+=len;
-    }
+    // while(i < arr.length) {
+    //     chunkedArr.push(arr.slice(i, i+len));
+    //     i+=len;
+    // }
 
-    return chunkedArr;
+    // return chunkedArr;
+
+    //SOLUTION 2
+    const chunkedArr = [];
+
+    arr.array.forEach(element => {
+        const last = chunkedArr[chunkedArr.length-1];
+    });
   }
   
   // CHALLENGE 3: FLATTEN ARRAY
   // Take an array of arrays and flatten to a single array
   // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
   
-  function flattenArray(arrays) {}
+  function flattenArray(arrays) {
+      return arrays.reduce((a,b) => a.concat(b));
+  }
   
   // CHALLENGE 4: ANAGRAM
   // Return true if anagram and false if not
@@ -63,6 +73,6 @@ function longestWord(sen) {
   function letterChanges(str) {}
   
   // Call Function
-  const output = chunkArray([1,2,3,4,5,6,7],3);
+  const output = flattenArray([[1,2],[3,4],[5,6]]);
   
   console.log(output);
