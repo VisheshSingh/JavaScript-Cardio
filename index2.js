@@ -76,7 +76,18 @@ function longestWord(sen) {
   // ex. 'elbow' === 'below'
   // ex. 'Dormitory' === 'dirty room##'
   
-  function isAnagram(str1, str2) {}
+  function isAnagram(str1, str2) {
+    return formatString(str1) === formatString(str2);
+  }
+
+  function formatString(str){
+    return str
+        .replace(/[^\w]/g, '')
+        .toLowerCase()
+        .split('')
+        .sort()
+        .join('');
+  }
   
   // CHALLENGE 5: LETTER CHANGES
   // Change every letter of the string to the one that follows it and capitalize the vowels
@@ -86,6 +97,6 @@ function longestWord(sen) {
   function letterChanges(str) {}
   
   // Call Function
-  const output = flattenArray([[1,2],[3,4],[5,6]]);
+  const output = isAnagram('elbow', 'below');
   
   console.log(output);
