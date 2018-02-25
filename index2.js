@@ -55,7 +55,11 @@ function longestWord(sen) {
   // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
   
   function flattenArray(arrays) {
-      return arrays.reduce((a,b) => a.concat(b));
+      // SOLUTION 1
+      //return arrays.reduce((a,b) => a.concat(b));
+
+      // SOLUTION 2
+      return [].concat.apply([], arrays);
   }
   
   // CHALLENGE 4: ANAGRAM
