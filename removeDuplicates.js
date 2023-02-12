@@ -33,5 +33,5 @@ console.log(d);
 
 // SOLUTION 3
 let x = [1, 2, 5, 2, 1, 8];
-let y = [...new Set(a)];
+let y = [...new Set(x)];
 console.log(y);
