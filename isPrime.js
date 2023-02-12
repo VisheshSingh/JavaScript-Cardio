@@ -30,10 +30,29 @@ let isPrime = n => {
   return true;
 };
 
-console.log(isPrime(100000001));
+// console.log(isPrime(100000001));
 
 // for (let i = 0; i < 30; i++) {
 //   if (isPrime(i)) {
 //     console.log(i);
 //   }
 // }
+
+function isPrimeNumber(n) {
+  if (n === 2) return true;
+
+  if (n < 2 || n % 2 === 0 || !Number.isInteger(n)) return false
+
+  let ctr = 0;
+  for (let i = 3; i < Math.sqrt(n); i+=2) {
+    ctr++;
+    if (n % i == 0) { 
+      console.log({ctr})
+      return false 
+    }
+  }
+  console.log({ctr})
+  return true
+}
+
+console.log(isPrimeNumber(101))
