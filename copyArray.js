@@ -2,43 +2,36 @@
 
 // SOLUTION 1
 let arr = [1, 2, 3, 4];
-let arr2 = Array.from(arr);
-console.log(arr2);
+let res1 = Array.from(arr);
+console.log(res1);
 
 // SOLUTION 2
-let arr = [1, 2, 3, 4];
-let arr2 = [].concat(arr);
-console.log(arr2);
+let res2 = [].concat(arr);
+console.log(res2);
 
 // SOLUTION 3
-let arr = [1, 2, 3, 4];
-let arr2 = JSON.parse(JSON.stringify(arr));
-console.log(arr2);
+let res3 = JSON.parse(JSON.stringify(arr));
+console.log(res3);
 
 // SOLUTION 4
-let arr = [1, 2, 3, 4];
-let arr2 = Object.assign([], arr);
-console.log(arr2);
+let res4 = Object.assign([], arr);
+console.log(res4);
 
 // SOLUTION 5
-let arr = [1, 2, 3, 4];
-let arr2 = [...arr];
-console.log(arr2);
+let res5 = [...arr];
+console.log(res5);
 
 // SOLUTION 6
-let arr = [1, 2, 3, 4];
-let arr2 = [];
+let res6 = [];
 for (let i = 0; i < arr.length; i++) {
-  arr2.push(arr[i]);
+  res6.push(arr[i]);
 }
-console.log(arr2);
+console.log(res6);
 
 // SOLUTION 7
-let arr = [1, 2, 3, 4];
-let arr2 = arr.splice(0);
-console.log(arr2);
+let res7 = arr.splice(0);
+console.log(res7);
 
 // SOLUTION 8
-let arr = [1, 2, 3, 4];
-let arr2 = arr.map(x => x);
-console.log(arr2);
+let res8 = arr.map(x => x);
+console.log(res8);
